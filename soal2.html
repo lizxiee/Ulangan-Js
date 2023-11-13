@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soal 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      padding: 5px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Perulangan Kalimat</h2>
+
+  <div>
+    <label for="jumlahKalimat">Jumlah Kalimat:</label>
+    <input type="number" id="jumlahKalimat">
+  </div>
+  <button onclick="tampilkanKalimat()">Tampilkan Kalimat</button>
+
+  <h3>Hasil:</h3>
+  <div id="hasilPerulangan"></div>
+
+  <script>
+    function tampilkanKalimat() {
+      const jumlahKalimat = document.getElementById('jumlahKalimat').value;
+
+      // Validasi bahwa input adalah angka positif
+      if (!isNaN(jumlahKalimat) && jumlahKalimat > 0) {
+        const hasilPerulanganEl = document.getElementById('hasilPerulangan');
+        hasilPerulanganEl.innerHTML = ''; // Mengosongkan hasil sebelumnya
+
+        for (let i = 0; i < jumlahKalimat; i++) {
+          const kalimat = "Saya orang yang sabar, ramah, dan tidak membenci orang.";
+          hasilPerulanganEl.innerHTML += `<p>${kalimat}</p>`;
+        }
+      } else {
+        alert('Masukkan jumlah kalimat yang valid.');
+      }
+    }
+  </script>
+</body>
+</html>

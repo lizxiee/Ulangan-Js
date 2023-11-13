@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soal 4</title>
+  <script>
+    function hitung() {
+      // Mengambil nilai dari input
+      var angka1 = parseFloat(document.getElementById('angka1').value);
+      var angka2 = parseFloat(document.getElementById('angka2').value);
+
+      // Melakukan operasi matematika
+      var hasilPenjumlahan = angka1 + angka2;
+      var hasilPengurangan = angka1 - angka2;
+      var hasilPerkalian = angka1 * angka2;
+      var hasilPembagian = angka1 / angka2;
+
+      // Menampilkan hasil pada elemen dengan id 'hasil'
+      document.getElementById('hasil').innerHTML = 'Penjumlahan: ' + hasilPenjumlahan + '<br>' +
+                                                    'Pengurangan: ' + hasilPengurangan + '<br>' +
+                                                    'Perkalian: ' + hasilPerkalian + '<br>' +
+                                                    'Pembagian: ' + hasilPembagian;
+
+      // Mencari bilangan terbesar
+      var bilanganTerbesar = Math.max(angka1, angka2);
+      document.getElementById('bilanganTerbesar').innerHTML = 'Bilangan Terbesar: ' + bilanganTerbesar;
+    }
+  </script>
+</head>
+<body>
+  <h2>Kalkulator Matematika</h2>
+  
+  <label for="angka1">Masukkan Angka 1:</label>
+  <input type="number" id="angka1">
+    <br>
+    <br>
+
+  <label for="angka2">Masukkan Angka 2:</label>
+  <input type="number" id="angka2">
+    <br>
+    <br>
+  <button onclick="hitung()">Hitung</button>
+
+  <h3>Hasil:</h3>
+  <div id="hasil"></div>
+
+  <div id="bilanganTerbesar"></div>
+</body>
+</html>
